@@ -11,7 +11,14 @@ def get_index(value, tuple_list):
             return i
     return -1
 
-os.chdir(os.path.dirname(sys.argv[0]))
+if len(sys.argv) > 1:
+    if not os.path.isdir(sys.argv[1]):
+        print("Path supplied is not recognised as a directory")
+        time.sleep(3)
+        raise SystemExit
+    os.chdir(sys.argv[1])
+else:
+    os.chdir(os.path.dirname(sys.argv[0]))
 
 master_file_list = []
 for root, dirs, files in os.walk('.'):
