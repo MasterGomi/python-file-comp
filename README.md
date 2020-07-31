@@ -1,5 +1,5 @@
 # python-file-comp
-Compares all files (incl. subdirs) in the directory that it is executed from to spot duplicate files (even with different filenames)
+Compares all files (incl. subdirs) in a directory to spot duplicate files (even with different filenames)
 
 There are two (only slightly) different versions of this script. Unlike CompareShallow.py, CompareDeep.py performs a byte by byte comparison of each file. However, it is rather unlikely that CompareDeep.py will pick up on anything CompareShallow.py would have, and execution time increases **massively** depending on file size for CompareDeep.py, so I recommend only using CompareShallow.py.
 
